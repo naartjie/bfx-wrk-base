@@ -131,6 +131,8 @@ class Base extends EventEmitter {
     }
 
     this[fns] = fac
+    this.__facs = this.__facs || []
+    this.__facs.push(fns)
     fac.start(cb)
   }
 
